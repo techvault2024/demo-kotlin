@@ -34,5 +34,12 @@ jobs:    # jobs
       - name: gradle build
         run: gradle build
       - name: docker version
-        run: docker info
+        run: |
+          docker --version
+          docker info
+          docker images
+      - name: docker build
+        run: docker build . -t techvault2024/demo-kotlin2.0
+
+        
     
