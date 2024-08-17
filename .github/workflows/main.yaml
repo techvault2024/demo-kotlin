@@ -25,9 +25,18 @@ jobs:    # jobs
         run: |
           echo "add other action to build"
           echo "testing"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '17'
+      - run: java HelloWorldApp.java
 
       - name: Check java Version
         run: java --version
       - name: gradle build
         run: gradle build
+      - name: gradlew build
+        run: ./gradlew build
+      - name: docker version
+        run: docker info
     
