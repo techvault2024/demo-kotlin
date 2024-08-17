@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-kotlin
+  labels:
+    name: webapp
+spec:
+  containers:
+  - name: web
+    image: techvault2024/demo-kotlin
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
+        name: web
+        protocol: TCP
