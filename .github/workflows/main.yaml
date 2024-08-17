@@ -29,8 +29,6 @@ jobs:    # jobs
         with:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
-      - run: java HelloWorldApp.java
-
       - name: Check java Version
         run: java --version
       - name: gradle build
