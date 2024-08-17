@@ -25,4 +25,9 @@ jobs:    # jobs
         run: |
           echo "add other action to build"
           echo "testing"
+
+      - name: Check java Version
+        run: java --version
+      - name: gradle build
+        run: gradlew build
     
