@@ -39,7 +39,11 @@ jobs:    # jobs
           docker info
           docker images
       - name: docker build
-        run: docker build . -t techvault2024/demo-kotlin2.0
+        run: |
+          docker build . -t techvault2024/demo-kotlin2.0
+          docker images
+      - name: docker LOGIN
+        run: docker login -u {{ secret.dockerusername }} -p {{ secret.dockerpassword }}
 
         
     
