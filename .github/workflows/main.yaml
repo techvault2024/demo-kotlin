@@ -43,7 +43,9 @@ jobs:    # jobs
           docker build . -t techvault2024/demo-kotlin2.0
           docker images
       - name: docker LOGIN
-        run: docker login -u ${{ secrets.dockerusername }} -p ${{ secrets.dockerpassword }}
+        run: |
+          docker login -u ${{ secrets.dockerusername }} -p ${{ secrets.dockerpassword }}
+          cat /home/runner/.docker/config.json
 
         
     
