@@ -29,5 +29,5 @@ jobs:    # jobs
       - name: Check java Version
         run: java --version
       - name: gradle build
-        run: gradlew build
+        run: gradle build
     
